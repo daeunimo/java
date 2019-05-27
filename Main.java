@@ -58,7 +58,7 @@ public class Main {
 						
 					}
 					
-					//기존 배열 소멸 
+					//기존 배열의 메모리 소멸 
 					arrName=tempArrName;
 					arrNumber=tempArrNumber;
 					arrBirth=tempArrBirth;
@@ -141,7 +141,22 @@ public class Main {
 				scn.nextLine();
 				
 			} else if (inputValue.equals("5")) {
-
+				System.out.println("수정할 이름을 입력하세요.");
+				System.out.print("입력>");
+				
+				String name= scn.nextLine();
+				
+				for (int i=0; i<indexCount; i++) {
+					if (arrName[i].equals(name)) {
+						System.out.println("수정할 번호를 입력하세요.");
+						System.out.print("입력>");
+						String number= scn.nextLine();
+						arrNumber[i]=number;
+						
+						System.out.println("===계속 하시려면 enter...===");
+						scn.nextLine();
+					}
+				}
 			} else {
 
 				break;
