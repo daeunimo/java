@@ -9,44 +9,44 @@ public class P1 {
 		car1.setGas(gas);
 		boolean gasState=car1.isLeftGas(); 
 		if(gasState) {
-			System.out.println("Ãâ¹ßÇÕ´Ï´Ù.");
+			System.out.println("ì¶œë°œí•©ë‹ˆë‹¤.");
 			car1.run();
 		}
 		
 		if(car1.isLeftGas()) {
-			System.out.println("gas¸¦ ÁÖÀÔÇÒ ÇÊ¿ä°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("gasë¥¼ ì£¼ì…í•  í•„ìš”ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		} else {
-			System.out.println("gas¸¦ ÁÖÀÔÇÏ¼¼¿ä.");
+			System.out.println("gasë¥¼ ì£¼ì…í•˜ì„¸ìš”.");
 		}
 	}
 
 }
 
 class Car {
-	//ÇÊµå
+	//í•„ë“œ
 	int gas;
-	//»ı¼ºÀÚ
-	//¸Ş¼Òµå
+	//ìƒì„±ì
+	//ë©”ì†Œë“œ
 	void setGas(int gas) {
 		this.gas=gas;
 	}
 	
 	boolean isLeftGas() {
 		if(gas==0) {
-			System.out.println("gas°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("gasê°€ ì—†ìŠµë‹ˆë‹¤.");
 			return false;
 		}
-		System.out.println("gas°¡ ÀÖ½À´Ï´Ù");
+		System.out.println("gasê°€ ìˆìŠµë‹ˆë‹¤");
 		return true;
 	}
 	
 	void run() {
 		while(true) {
 			if(gas>0) {
-				System.out.println("´Ş¸³´Ï´Ù.(gasÀÜ·®:"+gas+")");
+				System.out.println("ë‹¬ë¦½ë‹ˆë‹¤.(gasì”ëŸ‰:"+gas+")");
 				gas-=1;	
 			} else {
-				System.out.println("¸ØÃä´Ï´Ù.(gasÀÜ·®:"+gas+")");
+				System.out.println("ë©ˆì¶¥ë‹ˆë‹¤.(gasì”ëŸ‰:"+gas+")");
 				return;
 			}
 		}
